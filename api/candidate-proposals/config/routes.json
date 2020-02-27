@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/candidate-proposals",
+      "handler": "candidate-proposals.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/candidate-proposals/count",
+      "handler": "candidate-proposals.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/candidate-proposals/:id",
+      "handler": "candidate-proposals.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/candidate-proposals",
+      "handler": "candidate-proposals.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/candidate-proposals/:id",
+      "handler": "candidate-proposals.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/candidate-proposals/:id",
+      "handler": "candidate-proposals.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

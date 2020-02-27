@@ -1,0 +1,25 @@
+{
+  "connection": "default",
+  "collectionName": "candidate_proposals",
+  "info": {
+    "name": "Candidate Proposals"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "proposal": {
+      "type": "string",
+      "required": true
+    },
+    "candidate": {
+      "via": "candidate_proposals",
+      "model": "candidate"
+    },
+    "categories": {
+      "via": "candidate_proposals",
+      "collection": "category"
+    }
+  }
+}

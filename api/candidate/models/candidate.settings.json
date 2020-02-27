@@ -1,0 +1,70 @@
+{
+  "connection": "default",
+  "collectionName": "candidates",
+  "info": {
+    "name": "Candidate"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "about": {
+      "type": "richtext"
+    },
+    "avatar": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "candidacy": {
+      "type": "enumeration",
+      "enum": [
+        "Presidente",
+        "Vicepresidente",
+        "Senador",
+        "Diputado",
+        "Sindico",
+        "Regidor",
+        "Alcalde",
+        "Vicealcalde",
+        "Vocal"
+      ],
+      "required": true
+    },
+    "ticket_position": {
+      "type": "integer"
+    },
+    "is_active": {
+      "type": "boolean"
+    },
+    "ticket_name": {
+      "type": "string"
+    },
+    "document_id": {
+      "type": "string"
+    },
+    "contact": {
+      "type": "component",
+      "repeatable": true,
+      "component": "contact.contact"
+    },
+    "candidate_proposals": {
+      "collection": "candidate-proposals",
+      "via": "candidate"
+    },
+    "social": {
+      "type": "component",
+      "repeatable": true,
+      "component": "contact.social"
+    },
+    "district": {
+      "model": "district"
+    }
+  }
+}

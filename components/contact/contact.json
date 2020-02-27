@@ -1,0 +1,20 @@
+{
+  "info": {
+    "name": "Contact",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "phone": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    }
+  },
+  "connection": "default",
+  "collectionName": "components_contact_contacts"
+}

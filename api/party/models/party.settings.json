@@ -1,0 +1,42 @@
+{
+  "connection": "default",
+  "collectionName": "parties",
+  "info": {
+    "name": "Party"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "acronym": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "funded": {
+      "type": "integer"
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "contact": {
+      "type": "component",
+      "repeatable": true,
+      "component": "contact.contact"
+    },
+    "social": {
+      "type": "component",
+      "repeatable": true,
+      "component": "contact.social"
+    }
+  }
+}

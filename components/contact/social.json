@@ -1,0 +1,29 @@
+{
+  "info": {
+    "name": "social",
+    "icon": "share-alt"
+  },
+  "options": {},
+  "attributes": {
+    "platform": {
+      "type": "enumeration",
+      "enum": [
+        "facebook",
+        "twitter",
+        "instagram",
+        "youtube",
+        "whatsapp",
+        "telegram"
+      ],
+      "required": true
+    },
+    "username": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  },
+  "connection": "default",
+  "collectionName": "components_contact_socials"
+}
